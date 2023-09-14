@@ -9,6 +9,7 @@ import com.example.qiblafinder.databinding.ActivityMainBinding
 import android.Manifest
 import android.content.pm.PackageManager
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         val compassDirection = 0
         binding.arrowImage.rotation = compassDirection.toFloat()
